@@ -18,12 +18,6 @@ function navigateTo(sectionId) {
         if (targetLink) {
             targetLink.classList.add('active');
         }
-
-        // 滚动到顶部
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
     }
 }
 
