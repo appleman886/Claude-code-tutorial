@@ -1,5 +1,8 @@
 // 页面导航功能
 function navigateTo(sectionId) {
+    // 保存当前滚动位置
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
     // 获取所有section和nav-link
     const sections = document.querySelectorAll('.section');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -19,6 +22,12 @@ function navigateTo(sectionId) {
             targetLink.classList.add('active');
         }
     }
+
+    // 恢复滚动位置
+    window.scrollTo({
+        top: scrollTop,
+        behavior: 'auto'
+    });
 }
 
 // 导航链接点击事件
