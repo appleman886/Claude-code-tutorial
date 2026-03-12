@@ -122,7 +122,7 @@ document.querySelectorAll('.code-block').forEach(codeBlock => {
 document.addEventListener('keydown', function(e) {
     // Ctrl/Cmd + 数字键快速导航
     if (e.ctrlKey || e.metaKey) {
-        const sections = ['home', 'nodejs', 'git', 'claude-code', 'zhipu-api'];
+        const sections = ['home', 'nodejs', 'git', 'claude-code', 'aliyun-api'];
         const num = parseInt(e.key);
 
         if (num >= 1 && num <= sections.length) {
@@ -132,7 +132,7 @@ document.addEventListener('keydown', function(e) {
     }
 
     // 左右箭头键切换页面
-    const sections = ['home', 'nodejs', 'git', 'claude-code', 'zhipu-api'];
+    const sections = ['home', 'nodejs', 'git', 'claude-code', 'aliyun-api'];
     const activeSection = document.querySelector('.section.active');
     if (activeSection) {
         const currentIndex = sections.indexOf(activeSection.id);
@@ -173,7 +173,7 @@ function createBreadcrumbs() {
         { id: 'nodejs', name: 'Node.js' },
         { id: 'git', name: 'Git' },
         { id: 'claude-code', name: 'Claude Code' },
-        { id: 'zhipu-api', name: '智谱API' }
+        { id: 'aliyun-api', name: '阿里云百炼' }
     ];
 
     const activeSection = document.querySelector('.section.active');
