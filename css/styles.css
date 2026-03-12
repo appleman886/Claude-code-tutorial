@@ -559,3 +559,113 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+/* 介绍部分 */
+.intro-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.intro-card {
+    background: var(--surface);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    border: 2px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.intro-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.intro-text {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.intro-list {
+    list-style: none;
+    color: var(--text-secondary);
+    line-height: 2;
+}
+
+.intro-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.intro-list li:last-child {
+    border-bottom: none;
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.benefit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    background: var(--surface-light);
+    border-radius: 10px;
+}
+
+.benefit-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.benefit-text {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* 详细列表 */
+.detail-list {
+    list-style: none;
+    color: var(--text-secondary);
+    line-height: 2;
+    margin: 10px 0;
+}
+
+.detail-list li {
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.detail-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* 键盘快捷键样式 */
+kbd {
+    background: var(--surface-light);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 2px 8px;
+    font-family: monospace;
+    font-size: 0.9em;
+    color: var(--text-primary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

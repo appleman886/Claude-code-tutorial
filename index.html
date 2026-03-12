@@ -16,6 +16,50 @@
             </div>
         </header>
 
+        <!-- Claude 介绍 -->
+        <div class="intro-section">
+            <div class="intro-card">
+                <h2 class="intro-title">什么是 Claude Code？</h2>
+                <p class="intro-text">
+                    Claude Code 是 Anthropic 公司推出的 AI 编程助手，通过命令行界面与 Claude 人工智能模型交互。
+                    它可以帮助你编写代码、调试程序、解释复杂概念、重构代码，是一个强大的开发工具。
+                </p>
+            </div>
+
+            <div class="intro-card">
+                <h2 class="intro-title">为什么要安装 Claude Code？</h2>
+                <ul class="intro-list">
+                    <li>🎯 <strong>提升效率</strong> - 自动生成代码，减少重复劳动</li>
+                    <li>🔍 <strong>智能调试</strong> - 快速定位和修复 bug</li>
+                    <li>📚 <strong>代码解释</strong> - 理解复杂的代码逻辑</li>
+                    <li>✨ <strong>代码优化</strong> - 重构和改进代码质量</li>
+                    <li>🌍 <strong>多语言支持</strong> - 支持 Python、JavaScript、C++ 等主流语言</li>
+                </ul>
+            </div>
+
+            <div class="intro-card">
+                <h2 class="intro-title">安装 Claude Code 的好处</h2>
+                <div class="benefit-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">⚡</span>
+                        <span class="benefit-text">命令行操作，快速便捷</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">💻</span>
+                        <span class="benefit-text">本地开发，无需打开浏览器</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🔧</span>
+                        <span class="benefit-text">深度集成开发工作流</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🎨</span>
+                        <span class="benefit-text">可自定义 API 服务提供商</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- 操作系统选择器 -->
         <div class="os-selector">
             <div class="os-label">选择您的操作系统</div>
@@ -97,23 +141,32 @@
                         <div class="step-block">
                             <h3 class="step-number">🪟 Windows 一键安装</h3>
                             <div class="step-details">
-                                <p>打开命令提示符（CMD）或 PowerShell，输入以下命令：</p>
+                                <p><strong>步骤 1：打开命令提示符</strong></p>
+                                <ul class="detail-list">
+                                    <li>按下 <kbd>Win + R</kbd> 键</li>
+                                    <li>输入 <code>cmd</code> 并回车</li>
+                                    <li>或者按下 <kbd>Win + X</kbd>，选择"命令提示符"或"Windows PowerShell"</li>
+                                </ul>
+
+                                <p style="margin-top: 15px;"><strong>步骤 2：复制并运行安装命令</strong></p>
+                                <p>点击下方代码块复制命令，然后在命令提示符窗口中<strong>右键点击</strong>粘贴（会自动执行）：</p>
                                 <div class="code-block">
                                     <code>winget install OpenJS.NodeJS.LTS</code>
                                 </div>
-                                <p class="tip">如果没有 winget，请访问 <a href="https://nodejs.org/" target="_blank">Node.js 官网</a> 下载安装。</p>
-                            </div>
-                        </div>
+                                <p>等待安装完成，期间可能需要你按 <kbd>Y</kbd> 确认。</p>
 
-                        <div class="step-block">
-                            <h3 class="step-number">验证安装</h3>
-                            <div class="step-details">
-                                <p>重启命令行窗口，输入以下命令：</p>
+                                <p style="margin-top: 15px;"><strong>步骤 3：验证安装</strong></p>
+                                <p>关闭当前命令提示符窗口，重新打开，输入以下命令：</p>
                                 <div class="code-block">
                                     <code>node -v</code>
                                 </div>
                                 <p>如果显示版本号（例如 v20.x.x），说明安装成功！</p>
                             </div>
+                        </div>
+
+                        <div class="tip-box">
+                            <h4 class="tip-title">💡 如果 winget 不可用</h4>
+                            <p>如果提示 winget 命令不存在，请访问 <a href="https://nodejs.org/" target="_blank">Node.js 官网</a> 下载安装包，双击安装即可。</p>
                         </div>
                     </div>
 
@@ -122,24 +175,37 @@
                         <div class="step-block">
                             <h3 class="step-number">🍎 macOS 一键安装</h3>
                             <div class="step-details">
-                                <p><strong>方法一：使用 Homebrew（推荐）</strong></p>
+                                <p><strong>步骤 1：打开终端</strong></p>
+                                <ul class="detail-list">
+                                    <li>按下 <kbd>Command + 空格</kbd> 打开 Spotlight 搜索</li>
+                                    <li>输入"终端"或"Terminal"</li>
+                                    <li>按回车打开终端应用</li>
+                                    <li>或者在 Finder 中打开"应用程序" → "实用工具" → "终端"</li>
+                                </ul>
+
+                                <p style="margin-top: 15px;"><strong>步骤 2：检查是否安装了 Homebrew</strong></p>
+                                <p>在终端中输入以下命令，按回车：</p>
                                 <div class="code-block">
-                                    <code>brew install node</code>
+                                    <code>brew --version</code>
                                 </div>
-                                <p>如果没有 Homebrew，先安装 Homebrew：</p>
+                                <p>如果显示版本号，说明已安装。如果提示"command not found"，需要先安装 Homebrew。</p>
+
+                                <p style="margin-top: 15px;"><strong>步骤 3：安装 Homebrew（如果需要）</strong></p>
+                                <p>点击下方代码块复制命令，然后在终端窗口中粘贴（<kbd>Command + V</kbd>），按回车执行：</p>
                                 <div class="code-block">
                                     <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>
                                 </div>
+                                <p>安装过程中需要你输入管理员密码（输入时不会显示字符），按回车确认。</p>
 
-                                <p style="margin-top: 15px;"><strong>方法二：使用安装包</strong></p>
-                                <a href="https://nodejs.org/" target="_blank" class="btn btn-external">访问 Node.js 官网下载</a>
-                            </div>
-                        </div>
+                                <p style="margin-top: 15px;"><strong>步骤 4：使用 Homebrew 安装 Node.js</strong></p>
+                                <p>在终端中输入以下命令：</p>
+                                <div class="code-block">
+                                    <code>brew install node</code>
+                                </div>
+                                <p>等待安装完成。</p>
 
-                        <div class="step-block">
-                            <h3 class="step-number">验证安装</h3>
-                            <div class="step-details">
-                                <p>打开终端，输入以下命令：</p>
+                                <p style="margin-top: 15px;"><strong>步骤 5：验证安装</strong></p>
+                                <p>在终端中输入以下命令：</p>
                                 <div class="code-block">
                                     <code>node -v</code>
                                 </div>
@@ -153,19 +219,36 @@
                         <div class="step-block">
                             <h3 class="step-number">🐧 Linux 一键安装</h3>
                             <div class="step-details">
-                                <p><strong>Ubuntu/Debian:</strong></p>
+                                <p><strong>步骤 1：打开终端</strong></p>
+                                <ul class="detail-list">
+                                    <li>按下 <kbd>Ctrl + Alt + T</kbd> 快捷键打开终端</li>
+                                    <li>或者在应用菜单中搜索"Terminal"</li>
+                                    <li>右键点击桌面或文件夹空白处，选择"在终端中打开"（不同发行版可能略有不同）</li>
+                                </ul>
+
+                                <p style="margin-top: 15px;"><strong>步骤 2：确认你的 Linux 发行版</strong></p>
+                                <p>在终端中输入以下命令查看系统版本：</p>
+                                <div class="code-block">
+                                    <code>cat /etc/os-release</code>
+                                </div>
+                                <p>查看输出中的 <code>NAME</code> 或 <code>PRETTY_NAME</code> 来确认你的发行版。</p>
+
+                                <p style="margin-top: 20px;"><strong>步骤 3：根据发行版选择安装命令</strong></p>
+
+                                <p style="margin-top: 15px;"><strong>Ubuntu / Debian / Kali Linux:</strong></p>
                                 <div class="code-block">
                                     <code>curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -</code><br>
                                     <code>sudo apt install -y nodejs</code>
                                 </div>
 
-                                <p style="margin-top: 15px;"><strong>CentOS/RHEL:</strong></p>
+                                <p style="margin-top: 15px;"><strong>CentOS / RHEL / Fedora (RPM 系列):</strong></p>
                                 <div class="code-block">
                                     <code>curl -fsSL https://rpm.nodesource.com/setup_lts.x | sudo bash -</code><br>
                                     <code>sudo yum install -y nodejs</code>
                                 </div>
+                                <p class="tip">注意：Fedora 可以使用 <code>dnf</code> 替代 <code>yum</code></p>
 
-                                <p style="margin-top: 15px;"><strong>Arch Linux:</strong></p>
+                                <p style="margin-top: 15px;"><strong>Arch Linux / Manjaro:</strong></p>
                                 <div class="code-block">
                                     <code>sudo pacman -S nodejs npm</code>
                                 </div>
@@ -174,18 +257,43 @@
                                 <div class="code-block">
                                     <code>sudo dnf install nodejs</code>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="step-block">
-                            <h3 class="step-number">验证安装</h3>
-                            <div class="step-details">
-                                <p>打开终端，输入以下命令：</p>
+                                <p style="margin-top: 15px;"><strong>openSUSE:</strong></p>
+                                <div class="code-block">
+                                    <code>sudo zypper install nodejs</code>
+                                </div>
+
+                                <p style="margin-top: 20px;"><strong>如何粘贴命令到终端：</strong></p>
+                                <ul class="detail-list">
+                                    <li><strong>复制命令：</strong> 选中代码块中的命令，按 <kbd>Ctrl + C</kbd> 复制</li>
+                                    <li><strong>粘贴命令：</strong> 在终端中按 <kbd>Ctrl + Shift + V</kbd> 粘贴（大部分 Linux 终端）</li>
+                                    <li><strong>或者：</strong> 在终端中右键点击，选择"粘贴"</li>
+                                    <li><strong>或者：</strong> 有些终端支持 <kbd>Shift + Insert</kbd> 粘贴</li>
+                                </ul>
+
+                                <p style="margin-top: 15px;"><strong>步骤 4：安装过程中的提示</strong></p>
+                                <ul class="detail-list">
+                                    <li>如果提示输入密码，输入你的用户密码（输入时不会显示字符），按回车</li>
+                                    <li>如果询问是否继续安装，输入 <code>y</code> 然后按回车</li>
+                                    <li>等待安装完成，可能需要几分钟</li>
+                                </ul>
+
+                                <p style="margin-top: 15px;"><strong>步骤 5：验证安装</strong></p>
+                                <p>在终端中输入以下命令：</p>
                                 <div class="code-block">
                                     <code>node -v</code>
                                 </div>
-                                <p>如果显示版本号，说明安装成功！</p>
+                                <p>如果显示版本号（例如 v20.x.x），说明安装成功！</p>
                             </div>
+                        </div>
+
+                        <div class="tip-box">
+                            <h4 class="tip-title">💡 常见问题</h4>
+                            <ul class="detail-list">
+                                <li><strong>提示权限不足：</strong> 在命令前加 <code>sudo</code></li>
+                                <li><strong>curl 命令不存在：</strong> 先运行 <code>sudo apt install curl</code> 或 <code>sudo yum install curl</code></li>
+                                <li><strong>找不到对应发行版的命令：</strong> 访问 <a href="https://nodejs.org/" target="_blank">Node.js 官网</a> 查看详细安装指南</li>
+                            </ul>
                         </div>
                     </div>
 
@@ -204,18 +312,21 @@
                         <div class="step-block">
                             <h3 class="step-number">🪟 Windows 一键安装</h3>
                             <div class="step-details">
-                                <p>打开命令提示符（CMD）或 PowerShell，输入以下命令：</p>
+                                <p><strong>步骤 1：打开命令提示符</strong></p>
+                                <ul class="detail-list">
+                                    <li>按下 <kbd>Win + R</kbd> 键</li>
+                                    <li>输入 <code>cmd</code> 并回车</li>
+                                </ul>
+
+                                <p style="margin-top: 15px;"><strong>步骤 2：复制并运行安装命令</strong></p>
+                                <p>点击下方代码块复制命令，然后在命令提示符窗口中<strong>右键点击</strong>粘贴：</p>
                                 <div class="code-block">
                                     <code>winget install Git.Git</code>
                                 </div>
-                                <p class="tip">如果没有 winget，请访问 <a href="https://git-scm.com/download/win" target="_blank">Git 官网</a> 下载安装。</p>
-                            </div>
-                        </div>
+                                <p>等待安装完成。</p>
 
-                        <div class="step-block">
-                            <h3 class="step-number">验证安装</h3>
-                            <div class="step-details">
-                                <p>重启命令行窗口，输入以下命令：</p>
+                                <p style="margin-top: 15px;"><strong>步骤 3：验证安装</strong></p>
+                                <p>关闭当前命令提示符窗口，重新打开，输入以下命令：</p>
                                 <div class="code-block">
                                     <code>git --version</code>
                                 </div>
@@ -229,26 +340,30 @@
                         <div class="step-block">
                             <h3 class="step-number">🍎 macOS 一键安装</h3>
                             <div class="step-details">
-                                <p><strong>方法一：使用 Homebrew（推荐）</strong></p>
+                                <p><strong>步骤 1：打开终端</strong></p>
+                                <ul class="detail-list">
+                                    <li>按下 <kbd>Command + 空格</kbd> 打开 Spotlight 搜索</li>
+                                    <li>输入"终端"或"Terminal"</li>
+                                    <li>按回车打开终端应用</li>
+                                </ul>
+
+                                <p style="margin-top: 15px;"><strong>步骤 2：选择安装方式</strong></p>
+
+                                <p style="margin-top: 15px;"><strong>方法一：使用 Homebrew（推荐）</strong></p>
+                                <p>在终端中输入以下命令：</p>
                                 <div class="code-block">
                                     <code>brew install git</code>
                                 </div>
 
                                 <p style="margin-top: 15px;"><strong>方法二：使用 Xcode 命令行工具</strong></p>
+                                <p>在终端中输入以下命令：</p>
                                 <div class="code-block">
                                     <code>xcode-select --install</code>
                                 </div>
-                                <p class="tip">系统会自动安装 Git 和其他开发工具。</p>
+                                <p>系统会弹出对话框，点击"安装"按钮，系统会自动安装 Git 和其他开发工具。</p>
 
-                                <p style="margin-top: 15px;"><strong>方法三：使用安装包</strong></p>
-                                <a href="https://git-scm.com/download/mac" target="_blank" class="btn btn-external">访问 Git 官网下载</a>
-                            </div>
-                        </div>
-
-                        <div class="step-block">
-                            <h3 class="step-number">验证安装</h3>
-                            <div class="step-details">
-                                <p>打开终端，输入以下命令：</p>
+                                <p style="margin-top: 15px;"><strong>步骤 3：验证安装</strong></p>
+                                <p>在终端中输入以下命令：</p>
                                 <div class="code-block">
                                     <code>git --version</code>
                                 </div>
@@ -262,17 +377,25 @@
                         <div class="step-block">
                             <h3 class="step-number">🐧 Linux 一键安装</h3>
                             <div class="step-details">
-                                <p><strong>Ubuntu/Debian:</strong></p>
+                                <p><strong>步骤 1：打开终端</strong></p>
+                                <ul class="detail-list">
+                                    <li>按下 <kbd>Ctrl + Alt + T</kbd> 快捷键打开终端</li>
+                                    <li>或者在应用菜单中搜索"Terminal"</li>
+                                </ul>
+
+                                <p style="margin-top: 15px;"><strong>步骤 2：根据你的发行版选择命令</strong></p>
+
+                                <p style="margin-top: 15px;"><strong>Ubuntu / Debian / Kali Linux:</strong></p>
                                 <div class="code-block">
                                     <code>sudo apt update && sudo apt install -y git</code>
                                 </div>
 
-                                <p style="margin-top: 15px;"><strong>CentOS/RHEL:</strong></p>
+                                <p style="margin-top: 15px;"><strong>CentOS / RHEL:</strong></p>
                                 <div class="code-block">
                                     <code>sudo yum install -y git</code>
                                 </div>
 
-                                <p style="margin-top: 15px;"><strong>Arch Linux:</strong></p>
+                                <p style="margin-top: 15px;"><strong>Arch Linux / Manjaro:</strong></p>
                                 <div class="code-block">
                                     <code>sudo pacman -S git</code>
                                 </div>
@@ -286,13 +409,16 @@
                                 <div class="code-block">
                                     <code>sudo zypper install -y git</code>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="step-block">
-                            <h3 class="step-number">验证安装</h3>
-                            <div class="step-details">
-                                <p>打开终端，输入以下命令：</p>
+                                <p style="margin-top: 20px;"><strong>如何粘贴命令到终端：</strong></p>
+                                <ul class="detail-list">
+                                    <li><strong>复制命令：</strong> 选中代码块中的命令，按 <kbd>Ctrl + C</kbd> 复制</li>
+                                    <li><strong>粘贴命令：</strong> 在终端中按 <kbd>Ctrl + Shift + V</kbd> 粘贴</li>
+                                    <li><strong>或者：</strong> 在终端中右键点击，选择"粘贴"</li>
+                                </ul>
+
+                                <p style="margin-top: 15px;"><strong>步骤 3：验证安装</strong></p>
+                                <p>在终端中输入以下命令：</p>
                                 <div class="code-block">
                                     <code>git --version</code>
                                 </div>
@@ -314,7 +440,10 @@
                     <div class="step-block">
                         <h3 class="step-number">1. 安装 Claude Code</h3>
                         <div class="step-details">
-                            <p>打开命令行工具（CMD/PowerShell/终端），输入以下命令：</p>
+                            <p class="os-windows"><strong>Windows 用户：</strong>打开命令提示符（CMD）或 PowerShell</p>
+                            <p class="os-macos os-linux"><strong>macOS/Linux 用户：</strong>打开终端</p>
+
+                            <p style="margin-top: 10px;">输入以下命令：</p>
                             <div class="code-block">
                                 <code>npm install -g @anthropic-ai/claude-code</code>
                             </div>
@@ -385,7 +514,7 @@
                             <h3 class="step-number">3. 配置环境变量（Windows）</h3>
                             <div class="step-details">
                                 <p><strong>方法一：使用 CMD（推荐）</strong></p>
-                                <p>设置 API Key：</p>
+                                <p>打开命令提示符，设置 API Key：</p>
                                 <div class="code-block">
                                     <code>setx ANTHROPIC_AUTH_TOKEN "你的智谱API密钥"</code>
                                 </div>
@@ -395,7 +524,7 @@
                                 </div>
 
                                 <p style="margin-top: 15px;"><strong>方法二：使用 PowerShell</strong></p>
-                                <p>设置 API Key：</p>
+                                <p>打开 PowerShell，设置 API Key：</p>
                                 <div class="code-block">
                                     <code>$env:ANTHROPIC_AUTH_TOKEN="你的智谱API密钥"</code><br>
                                     <code>[Environment]::SetEnvironmentVariable("ANTHROPIC_AUTH_TOKEN", $env:ANTHROPIC_AUTH_TOKEN, "User")</code>
@@ -417,7 +546,7 @@
                             <h3 class="step-number">3. 配置环境变量（macOS）</h3>
                             <div class="step-details">
                                 <p><strong>方法一：临时配置（当前会话有效）</strong></p>
-                                <p>设置 API Key：</p>
+                                <p>打开终端，设置 API Key：</p>
                                 <div class="code-block">
                                     <code>export ANTHROPIC_AUTH_TOKEN="你的智谱API密钥"</code>
                                 </div>
@@ -427,7 +556,7 @@
                                 </div>
 
                                 <p style="margin-top: 15px;"><strong>方法二：永久配置（推荐）</strong></p>
-                                <p>编辑 shell 配置文件（zsh 或 bash）：</p>
+                                <p>打开终端，编辑 shell 配置文件（zsh 或 bash）：</p>
                                 <div class="code-block">
                                     <code>echo 'export ANTHROPIC_AUTH_TOKEN="你的智谱API密钥"' >> ~/.zshrc</code><br>
                                     <code>echo 'export ANTHROPIC_BASE_URL="https://open.bigmodel.cn/api/paas/v4"' >> ~/.zshrc</code><br>
@@ -444,7 +573,7 @@
                             <h3 class="step-number">3. 配置环境变量（Linux）</h3>
                             <div class="step-details">
                                 <p><strong>方法一：临时配置（当前会话有效）</strong></p>
-                                <p>设置 API Key：</p>
+                                <p>打开终端，设置 API Key：</p>
                                 <div class="code-block">
                                     <code>export ANTHROPIC_AUTH_TOKEN="你的智谱API密钥"</code>
                                 </div>
@@ -454,7 +583,7 @@
                                 </div>
 
                                 <p style="margin-top: 15px;"><strong>方法二：永久配置（推荐）</strong></p>
-                                <p>编辑 shell 配置文件：</p>
+                                <p>打开终端，编辑 shell 配置文件：</p>
                                 <div class="code-block">
                                     <code>echo 'export ANTHROPIC_AUTH_TOKEN="你的智谱API密钥"' >> ~/.bashrc</code><br>
                                     <code>echo 'export ANTHROPIC_BASE_URL="https://open.bigmodel.cn/api/paas/v4"' >> ~/.bashrc</code><br>
