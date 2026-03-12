@@ -122,7 +122,7 @@ document.querySelectorAll('.code-block').forEach(codeBlock => {
 document.addEventListener('keydown', function(e) {
     // Ctrl/Cmd + 数字键快速导航
     if (e.ctrlKey || e.metaKey) {
-        const sections = ['home', 'nodejs', 'git', 'claude-code', 'aliyun-api'];
+        const sections = ['home', 'nodejs', 'git', 'claude-code', 'zhipu-api'];
         const num = parseInt(e.key);
 
         if (num >= 1 && num <= sections.length) {
@@ -132,7 +132,7 @@ document.addEventListener('keydown', function(e) {
     }
 
     // 左右箭头键切换页面
-    const sections = ['home', 'nodejs', 'git', 'claude-code', 'aliyun-api'];
+    const sections = ['home', 'nodejs', 'git', 'claude-code', 'zhipu-api'];
     const activeSection = document.querySelector('.section.active');
     if (activeSection) {
         const currentIndex = sections.indexOf(activeSection.id);
@@ -173,7 +173,7 @@ function createBreadcrumbs() {
         { id: 'nodejs', name: 'Node.js' },
         { id: 'git', name: 'Git' },
         { id: 'claude-code', name: 'Claude Code' },
-        { id: 'aliyun-api', name: '阿里云百炼' }
+        { id: 'zhipu-api', name: '智谱API' }
     ];
 
     const activeSection = document.querySelector('.section.active');
@@ -232,3 +232,56 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+// 操作系统选择功能
+function selectOS(osName) {
+    // 更新按钮状态
+    const osButtons = document.querySelectorAll('.os-btn');
+    osButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.os === osName) {
+            btn.classList.add('active');
+        }
+    });
+
+    // 更新显示的系统名称
+    const osDisplays = document.querySelectorAll('.os-display');
+    const osNames = {
+        'windows': 'Windows',
+        'macos': 'macOS',
+        'linux': 'Linux'
+    };
+    osDisplays.forEach(display => {
+        display.textContent = osNames[osName];
+    });
+
+    // 更新各部分的内容显示
+    const allOsContent = document.querySelectorAll('.os-content');
+    allOsContent.forEach(content => {
+        content.classList.remove('active');
+    });
+
+    const selectedContents = document.querySelectorAll(`.os-${osName}`);
+    selectedContents.forEach(content => {
+        content.classList.add('active');
+    });
+
+    // 更新小贴士中的提示
+    const tipBoxes = document.querySelectorAll('.tip-box p');
+    tipBoxes.forEach(tip => {
+        tip.innerHTML = tip.innerHTML.replace(/<span class="os-[^"]*">.*?<\/span>/g, '');
+        const span = document.createElement('span');
+        if (osName === 'windows') {
+            span.className = 'os-windows';
+            span.textContent = '请以管理员身份运行命令提示符。';
+        } else {
+            span.className = `os-${osName}`;
+            span.textContent = '请使用 sudo 命令或在命令前加 sudo。';
+        }
+        tip.appendChild(span);
+    });
+}
+
+// 初始化时默认选择 Windows
+document.addEventListener('DOMContentLoaded', function() {
+    selectOS('windows');
+});

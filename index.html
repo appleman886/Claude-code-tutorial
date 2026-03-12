@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code 安装教程 - 阿里云百炼版</title>
+    <title>Claude Code 安装教程 - 智谱AI版</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -12,22 +12,27 @@
         <header class="header">
             <div class="header-content">
                 <h1 class="title">Claude Code 安装教程</h1>
-                <p class="subtitle">使用阿里云百炼模型，快速部署Claude Code</p>
+                <p class="subtitle">使用智谱AI模型，快速部署Claude Code</p>
             </div>
         </header>
 
         <!-- 操作系统选择器 -->
         <div class="os-selector">
-            <span class="os-label">选择操作系统：</span>
-            <button class="os-btn active" data-os="windows" onclick="selectOS('windows')">
-                <span class="os-icon">🪟</span> Windows
-            </button>
-            <button class="os-btn" data-os="macos" onclick="selectOS('macos')">
-                <span class="os-icon">🍎</span> macOS
-            </button>
-            <button class="os-btn" data-os="linux" onclick="selectOS('linux')">
-                <span class="os-icon">🐧</span> Linux
-            </button>
+            <div class="os-label">选择您的操作系统</div>
+            <div class="os-buttons">
+                <button class="os-btn active" data-os="windows" onclick="selectOS('windows')">
+                    <div class="os-icon">🪟</div>
+                    <div class="os-name">Windows</div>
+                </button>
+                <button class="os-btn" data-os="macos" onclick="selectOS('macos')">
+                    <div class="os-icon">🍎</div>
+                    <div class="os-name">macOS</div>
+                </button>
+                <button class="os-btn" data-os="linux" onclick="selectOS('linux')">
+                    <div class="os-icon">🐧</div>
+                    <div class="os-name">Linux</div>
+                </button>
+            </div>
         </div>
 
         <!-- 导航 -->
@@ -37,7 +42,7 @@
                 <li><a href="#nodejs" class="nav-link">Node.js</a></li>
                 <li><a href="#git" class="nav-link">Git</a></li>
                 <li><a href="#claude-code" class="nav-link">Claude Code</a></li>
-                <li><a href="#aliyun-api" class="nav-link">阿里云百炼</a></li>
+                <li><a href="#zhipu-api" class="nav-link">智谱API</a></li>
             </ul>
         </nav>
 
@@ -47,7 +52,7 @@
             <section id="home" class="section active">
                 <h2 class="section-title">欢迎使用 Claude Code 安装教程</h2>
                 <div class="content-card">
-                    <p class="intro">本教程将帮助您在 <span class="os-display">Windows</span> 系统上完整安装和配置 Claude Code，并使用阿里云百炼的模型服务。整个过程简单快捷，预计耗时 10-15 分钟。</p>
+                    <p class="intro">本教程将帮助您在 <span class="os-display">Windows</span> 系统上完整安装和配置 Claude Code，并使用智谱AI的模型服务。整个过程简单快捷，预计耗时 10-15 分钟。</p>
 
                     <div class="features">
                         <div class="feature-item">
@@ -58,7 +63,7 @@
                         <div class="feature-item">
                             <div class="feature-icon">💰</div>
                             <h3 class="feature-title">经济实惠</h3>
-                            <p class="feature-desc">使用阿里云百炼服务，性价比高</p>
+                            <p class="feature-desc">使用智谱AI服务，性价比高</p>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">🌐</div>
@@ -73,7 +78,7 @@
                             <li>一键安装 Node.js 运行环境</li>
                             <li>一键安装 Git 版本控制工具</li>
                             <li>安装 Claude Code 命令行工具</li>
-                            <li>配置阿里云百炼 API 密钥</li>
+                            <li>配置智谱 AI API 密钥</li>
                             <li>开始使用 Claude Code</li>
                         </ol>
                         <button class="btn btn-primary" onclick="navigateTo('nodejs')">开始安装 →</button>
@@ -87,7 +92,8 @@
                 <div class="content-card">
                     <p class="step-intro">Node.js 是 Claude Code 的运行环境，必须先安装。</p>
 
-                    <div class="os-content os-windows">
+                    <!-- Windows -->
+                    <div class="os-content os-windows active">
                         <div class="step-block">
                             <h3 class="step-number">🪟 Windows 一键安装</h3>
                             <div class="step-details">
@@ -111,6 +117,7 @@
                         </div>
                     </div>
 
+                    <!-- macOS -->
                     <div class="os-content os-macos">
                         <div class="step-block">
                             <h3 class="step-number">🍎 macOS 一键安装</h3>
@@ -141,6 +148,7 @@
                         </div>
                     </div>
 
+                    <!-- Linux -->
                     <div class="os-content os-linux">
                         <div class="step-block">
                             <h3 class="step-number">🐧 Linux 一键安装</h3>
@@ -191,7 +199,8 @@
                 <div class="content-card">
                     <p class="step-intro">Git 是版本控制工具，Claude Code 的一些功能会用到。</p>
 
-                    <div class="os-content os-windows">
+                    <!-- Windows -->
+                    <div class="os-content os-windows active">
                         <div class="step-block">
                             <h3 class="step-number">🪟 Windows 一键安装</h3>
                             <div class="step-details">
@@ -215,6 +224,7 @@
                         </div>
                     </div>
 
+                    <!-- macOS -->
                     <div class="os-content os-macos">
                         <div class="step-block">
                             <h3 class="step-number">🍎 macOS 一键安装</h3>
@@ -247,6 +257,7 @@
                         </div>
                     </div>
 
+                    <!-- Linux -->
                     <div class="os-content os-linux">
                         <div class="step-block">
                             <h3 class="step-number">🐧 Linux 一键安装</h3>
@@ -329,7 +340,7 @@
                             <div class="code-block">
                                 <code>claude</code>
                             </div>
-                            <p>首次使用时，系统会引导您进行配置。请选择跳过 API 密钥配置，我们将在下一步配置阿里云百炼。</p>
+                            <p>首次使用时，系统会引导您进行配置。请选择跳过 API 密钥配置，我们将在下一步配置智谱 AI。</p>
                         </div>
                     </div>
 
@@ -338,20 +349,20 @@
                         <p>如果安装过程中遇到权限问题，<span class="os-windows">请以管理员身份运行命令提示符。</span><span class="os-macos os-linux">请使用 sudo 命令或在命令前加 sudo。</span></p>
                     </div>
 
-                    <button class="btn btn-secondary" onclick="navigateTo('aliyun-api')">下一步：配置阿里云百炼 →</button>
+                    <button class="btn btn-secondary" onclick="navigateTo('zhipu-api')">下一步：配置智谱 API →</button>
                 </div>
             </section>
 
-            <!-- 阿里云百炼 API 部分 -->
-            <section id="aliyun-api" class="section">
-                <h2 class="section-title">第四步：配置阿里云百炼 API</h2>
+            <!-- 智谱 API 部分 -->
+            <section id="zhipu-api" class="section">
+                <h2 class="section-title">第四步：配置智谱 AI API</h2>
                 <div class="content-card">
-                    <p class="step-intro">最后一步是配置阿里云百炼的 API，让 Claude Code 使用阿里云的模型服务。</p>
+                    <p class="step-intro">最后一步是配置智谱 AI 的 API，让 Claude Code 使用智谱的模型服务。</p>
 
                     <div class="step-block">
-                        <h3 class="step-number">1. 注册阿里云账号</h3>
-                        <p class="step-desc">访问阿里云百炼平台，注册或登录账号。</p>
-                        <a href="https://dashscope.console.aliyun.com/" target="_blank" class="btn btn-external">访问阿里云百炼平台</a>
+                        <h3 class="step-number">1. 注册智谱 AI 账号</h3>
+                        <p class="step-desc">访问智谱开放平台，注册或登录账号。</p>
+                        <a href="https://open.bigmodel.cn/" target="_blank" class="btn btn-external">访问智谱开放平台</a>
                     </div>
 
                     <div class="step-block">
@@ -359,37 +370,39 @@
                         <div class="step-details">
                             <p>登录后，按照以下步骤获取 API Key：</p>
                             <ul class="steps-list">
-                                <li>进入控制台</li>
-                                <li>点击左侧菜单的"API-KEY管理"</li>
-                                <li>点击"创建API-KEY"</li>
+                                <li>进入个人中心</li>
+                                <li>点击"项目管理"</li>
+                                <li>点击"API keys"</li>
+                                <li>创建新的 API Key</li>
                                 <li>复制生成的 API Key（妥善保管！）</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="os-content os-windows">
+                    <!-- Windows -->
+                    <div class="os-content os-windows active">
                         <div class="step-block">
                             <h3 class="step-number">3. 配置环境变量（Windows）</h3>
                             <div class="step-details">
                                 <p><strong>方法一：使用 CMD（推荐）</strong></p>
                                 <p>设置 API Key：</p>
                                 <div class="code-block">
-                                    <code>setx ANTHROPIC_AUTH_TOKEN "你的阿里云API密钥"</code>
+                                    <code>setx ANTHROPIC_AUTH_TOKEN "你的智谱API密钥"</code>
                                 </div>
                                 <p>设置 API 地址：</p>
                                 <div class="code-block">
-                                    <code>setx ANTHROPIC_BASE_URL "https://dashscope.aliyuncs.com/compatible-mode/v1"</code>
+                                    <code>setx ANTHROPIC_BASE_URL "https://open.bigmodel.cn/api/paas/v4"</code>
                                 </div>
 
                                 <p style="margin-top: 15px;"><strong>方法二：使用 PowerShell</strong></p>
                                 <p>设置 API Key：</p>
                                 <div class="code-block">
-                                    <code>$env:ANTHROPIC_AUTH_TOKEN="你的阿里云API密钥"</code><br>
+                                    <code>$env:ANTHROPIC_AUTH_TOKEN="你的智谱API密钥"</code><br>
                                     <code>[Environment]::SetEnvironmentVariable("ANTHROPIC_AUTH_TOKEN", $env:ANTHROPIC_AUTH_TOKEN, "User")</code>
                                 </div>
                                 <p>设置 API 地址：</p>
                                 <div class="code-block">
-                                    <code>$env:ANTHROPIC_BASE_URL="https://dashscope.aliyuncs.com/compatible-mode/v1"</code><br>
+                                    <code>$env:ANTHROPIC_BASE_URL="https://open.bigmodel.cn/api/paas/v4"</code><br>
                                     <code>[Environment]::SetEnvironmentVariable("ANTHROPIC_BASE_URL", $env:ANTHROPIC_BASE_URL, "User")</code>
                                 </div>
 
@@ -398,6 +411,7 @@
                         </div>
                     </div>
 
+                    <!-- macOS -->
                     <div class="os-content os-macos">
                         <div class="step-block">
                             <h3 class="step-number">3. 配置环境变量（macOS）</h3>
@@ -405,18 +419,18 @@
                                 <p><strong>方法一：临时配置（当前会话有效）</strong></p>
                                 <p>设置 API Key：</p>
                                 <div class="code-block">
-                                    <code>export ANTHROPIC_AUTH_TOKEN="你的阿里云API密钥"</code>
+                                    <code>export ANTHROPIC_AUTH_TOKEN="你的智谱API密钥"</code>
                                 </div>
                                 <p>设置 API 地址：</p>
                                 <div class="code-block">
-                                    <code>export ANTHROPIC_BASE_URL="https://dashscope.aliyuncs.com/compatible-mode/v1"</code>
+                                    <code>export ANTHROPIC_BASE_URL="https://open.bigmodel.cn/api/paas/v4"</code>
                                 </div>
 
                                 <p style="margin-top: 15px;"><strong>方法二：永久配置（推荐）</strong></p>
                                 <p>编辑 shell 配置文件（zsh 或 bash）：</p>
                                 <div class="code-block">
-                                    <code>echo 'export ANTHROPIC_AUTH_TOKEN="你的阿里云API密钥"' >> ~/.zshrc</code><br>
-                                    <code>echo 'export ANTHROPIC_BASE_URL="https://dashscope.aliyuncs.com/compatible-mode/v1"' >> ~/.zshrc</code><br>
+                                    <code>echo 'export ANTHROPIC_AUTH_TOKEN="你的智谱API密钥"' >> ~/.zshrc</code><br>
+                                    <code>echo 'export ANTHROPIC_BASE_URL="https://open.bigmodel.cn/api/paas/v4"' >> ~/.zshrc</code><br>
                                     <code>source ~/.zshrc</code>
                                 </div>
                                 <p class="tip">如果使用 bash，将 ~/.zshrc 改为 ~/.bash_profile</p>
@@ -424,6 +438,7 @@
                         </div>
                     </div>
 
+                    <!-- Linux -->
                     <div class="os-content os-linux">
                         <div class="step-block">
                             <h3 class="step-number">3. 配置环境变量（Linux）</h3>
@@ -431,18 +446,18 @@
                                 <p><strong>方法一：临时配置（当前会话有效）</strong></p>
                                 <p>设置 API Key：</p>
                                 <div class="code-block">
-                                    <code>export ANTHROPIC_AUTH_TOKEN="你的阿里云API密钥"</code>
+                                    <code>export ANTHROPIC_AUTH_TOKEN="你的智谱API密钥"</code>
                                 </div>
                                 <p>设置 API 地址：</p>
                                 <div class="code-block">
-                                    <code>export ANTHROPIC_BASE_URL="https://dashscope.aliyuncs.com/compatible-mode/v1"</code>
+                                    <code>export ANTHROPIC_BASE_URL="https://open.bigmodel.cn/api/paas/v4"</code>
                                 </div>
 
                                 <p style="margin-top: 15px;"><strong>方法二：永久配置（推荐）</strong></p>
                                 <p>编辑 shell 配置文件：</p>
                                 <div class="code-block">
-                                    <code>echo 'export ANTHROPIC_AUTH_TOKEN="你的阿里云API密钥"' >> ~/.bashrc</code><br>
-                                    <code>echo 'export ANTHROPIC_BASE_URL="https://dashscope.aliyuncs.com/compatible-mode/v1"' >> ~/.bashrc</code><br>
+                                    <code>echo 'export ANTHROPIC_AUTH_TOKEN="你的智谱API密钥"' >> ~/.bashrc</code><br>
+                                    <code>echo 'export ANTHROPIC_BASE_URL="https://open.bigmodel.cn/api/paas/v4"' >> ~/.bashrc</code><br>
                                     <code>source ~/.bashrc</code>
                                 </div>
                                 <p class="tip">如果使用 zsh，将 ~/.bashrc 改为 ~/.zshrc</p>
@@ -457,7 +472,7 @@
                             <div class="code-block">
                                 <code>claude</code>
                             </div>
-                            <p>如果配置正确，Claude Code 将使用阿里云百炼的模型服务！</p>
+                            <p>如果配置正确，Claude Code 将使用智谱 AI 的模型服务！</p>
                         </div>
                     </div>
 
@@ -473,7 +488,7 @@
 
         <!-- 页脚 -->
         <footer class="footer">
-            <p class="footer-text">© 2026 Claude Code 安装教程 | 使用阿里云百炼服务</p>
+            <p class="footer-text">© 2026 Claude Code 安装教程 | 使用智谱AI服务</p>
         </footer>
     </div>
 
