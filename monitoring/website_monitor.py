@@ -64,18 +64,19 @@ def monitor_website():
     result = check_accessibility(base_url)
 
     if result['status'] == 'up':
-        log_message(f"✅ 网站正常 - 状态码: {result['status_code']}")
-        log_message(f"   内容大小: {result['size']} 字符")
-        log_message(f"   内容验证: {'✅ 通过' if result['has_content'] else '❌ 失败'}")
+        log_message("OK 网站正常 - 状态码: {}".format(result['status_code']))
+        log_message("   内容大小: {} 字符".format(result['size']))
+        log_message("   内容验证: {} 通过".format("OK" if result['has_content'] else "FAIL"))
 
         # 检查关键资源
         resources = ["css/styles.css", "js/script.js"]
         for resource in resources:
             resource_url = base_url.rstrip('/') + '/' + resource
             resource_result = check_accessibility(resource_url)
-            log_message(f"   {resource}: {'✅' if resource_result['status'] == 'up' else '❌'} ({resource_result['status_code'] if 'status_code' in resource_result else 'N/A'})")
+            status_icon = "OK" if resource_result['status'] == 'up' else "FAIL"
+            log_message("   {}: {} ({})".format(resource, status_icon, resource_result.get('status_code', 'N/A')))
     else:
-        log_message(f"❌ 网站异常 - {result['status']}: {result.get('message', 'Unknown error')}")
+        log_message("X 网站异常 - {}: {}".format(result['status'], result.get('message', 'Unknown error')))
 
     log_message("=== 监控完成 ===\n")
 
