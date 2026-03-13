@@ -669,3 +669,95 @@ kbd {
     color: var(--text-primary);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* 访问提示样式 */
+.access-notice {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    margin: 40px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.notice-content {
+    padding: 30px;
+    text-align: center;
+}
+
+.notice-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.notice-content p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.access-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.access-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.access-link:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.github {
+    background: #24292e;
+    color: #ffffff;
+}
+
+.github:hover {
+    background: #1a1e22;
+}
+
+.gitee {
+    background: #c71d23;
+    color: #ffffff;
+}
+
+.gitee:hover {
+    background: #a0171a;
+}
+
+.access-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.access-notice .tip {
+    color: var(--text-primary);
+    font-style: italic;
+    margin-top: 15px;
+}
