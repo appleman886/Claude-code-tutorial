@@ -146,16 +146,16 @@ python -m http.server 8000
 
 **部署时间**: 2026-03-14
 **部署方式**: Netlify 拖拽部署
-**网站地址**: https://sparkling-meringue-fff6b7.netlify.app
+**网站地址**: https://claude-code-tutorial.netlify.app
 
 ### 访问方式汇总
 | 平台 | 地址 | 国内访问 |
 |------|------|----------|
-| **Netlify** | https://claude-code-tutorial.netlify.app | ✅ 可访问 |
+| **Netlify** | https://claude-code-tutorial.netlify.app | ⚠️ 部分地区需代理 |
 | GitHub Pages | https://appleman886.github.io/Claude-code-tutorial/ | 需要代理 |
 
 ---
 
 **最后更新**: 2026-03-14
-**当前状态**: ✅ 项目完成并成功部署到 Netlify
-**注意事项**: 国内用户可直接访问 Netlify 地址
+**当前状态**: ✅ 项目完成并部署到 Netlify
+**注意事项**: Netlify 为免费托管，国内访问可能不稳定
