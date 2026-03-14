@@ -151,7 +151,7 @@ python -m http.server 8000
 ### 访问方式汇总
 | 平台 | 地址 | 国内访问 |
 |------|------|----------|
-| **Netlify** | https://sparkling-meringue-fff6b7.netlify.app | ✅ 可访问 |
+| **Netlify** | https://claude-code-tutorial.netlify.app | ✅ 可访问 |
 | GitHub Pages | https://appleman886.github.io/Claude-code-tutorial/ | 需要代理 |
 
 ---
