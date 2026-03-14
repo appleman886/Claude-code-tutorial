@@ -18,3 +18,5 @@ yarn-error.log*
 *.tmp
 *.temp
 .~lock.*
+# Local Netlify folder
+.netlify

@@ -1,0 +1,19 @@
+{
+  "name": "claude-code-tutorial",
+  "version": "1.0.0",
+  "description": "Claude Code 安装教程网站 - 智谱 AI 版",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build required'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "tutorial",
+    "zhipu",
+    "ai"
+  ],
+  "author": "appleman886",
+  "license": "MIT"
+}
