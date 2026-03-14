@@ -770,3 +770,89 @@ kbd {
     font-style: italic;
     margin-top: 15px;
 }
+
+/* API 对比卡片 */
+.api-compare {
+    margin-top: 40px;
+    padding: 30px;
+    background: var(--surface);
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+}
+
+.api-title {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.api-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.api-card {
+    background: var(--surface-light);
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.api-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary-color);
+}
+
+.api-card.highlight {
+    border-color: var(--success-color);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, var(--surface-light) 100%);
+}
+
+.api-card-title {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.api-card.highlight .api-card-title {
+    border-bottom-color: var(--success-color);
+}
+
+.api-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.api-list li {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.api-list li:last-child {
+    border-bottom: none;
+}
+
+.btn-small {
+    width: 100%;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
