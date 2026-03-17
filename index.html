@@ -463,45 +463,151 @@
                 <div class="content-card">
                     <p class="step-intro">现在可以安装 Claude Code 命令行工具了。</p>
 
-                    <div class="step-block">
-                        <h3 class="step-number">1. 安装 Claude Code</h3>
-                        <div class="step-details">
-                            <p class="os-windows"><strong>Windows 用户：</strong>打开命令提示符（CMD）或 PowerShell</p>
-                            <p class="os-macos os-linux"><strong>macOS/Linux 用户：</strong>打开终端</p>
+                    <!-- 前置条件检查 -->
+                    <div class="prerequisites-box">
+                        <h3 class="prerequisites-title">📋 安装前检查</h3>
+                        <p class="prerequisites-desc">请确保已完成以下准备工作：</p>
+                        <ul class="checklist">
+                            <li class="check-item">
+                                <span class="check-icon">✅</span>
+                                <span class="check-text">已安装 Node.js（<a href="#" onclick="navigateTo('nodejs'); return false;">查看安装教程</a>）</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">✅</span>
+                                <span class="check-text">已安装 Git（<a href="#" onclick="navigateTo('git'); return false;">查看安装教程</a>）</span>
+                            </li>
+                        </ul>
+                        <div class="prerequisites-tip">
+                            <span class="tip-icon">💡</span>
+                            <span class="tip-text">点击下方代码块可快速验证环境：</span>
+                        </div>
+                        <div class="code-block verification-code">
+                            <code>node -v && npm -v && git --version</code>
+                        </div>
+                        <p class="verification-desc">如果三个版本号都正常显示，说明环境准备就绪！</p>
+                    </div>
 
-                            <p style="margin-top: 10px;">输入以下命令：</p>
-                            <div class="code-block">
-                                <code>npm install -g @anthropic-ai/claude-code</code>
+                    <!-- 安装流程概览 -->
+                    <div class="workflow-box">
+                        <h3 class="workflow-title">📌 安装流程</h3>
+                        <div class="workflow-steps">
+                            <div class="workflow-step">
+                                <span class="step-dot">1</span>
+                                <span class="step-desc">打开终端</span>
                             </div>
-                            <p>等待安装完成，可能需要几分钟时间。</p>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step">
+                                <span class="step-dot">2</span>
+                                <span class="step-desc">运行安装命令</span>
+                            </div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step">
+                                <span class="step-dot">3</span>
+                                <span class="step-desc">验证安装</span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="step-block">
-                        <h3 class="step-number">2. 验证安装</h3>
-                        <div class="step-details">
-                            <p>安装完成后，输入以下命令查看版本：</p>
-                            <div class="code-block">
-                                <code>claude --version</code>
+                    <!-- Windows -->
+                    <div class="os-content os-windows active">
+                        <div class="step-block">
+                            <h3 class="step-number">🪟 Windows 一键安装（Git Bash）</h3>
+                            <div class="step-details">
+                                <p><strong>步骤 1：打开 Git Bash</strong></p>
+                                <ul class="detail-list">
+                                    <li>在桌面或文件夹空白处<strong>右键点击</strong></li>
+                                    <li>选择"Git Bash Here"</li>
+                                    <li>或者在开始菜单搜索"Git Bash"并打开</li>
+                                </ul>
+
+                                <p style="margin-top: 15px;"><strong>步骤 2：一键安装 Claude Code</strong></p>
+                                <p>在 Git Bash 窗口中，输入以下命令：</p>
+                                <div class="code-block">
+                                    <code>npm install -g @anthropic-ai/claude-code</code>
+                                </div>
+                                <p>等待安装完成，可能需要几分钟时间。</p>
+
+                                <p style="margin-top: 15px;"><strong>步骤 3：验证安装</strong></p>
+                                <p>输入以下命令查看版本：</p>
+                                <div class="code-block">
+                                    <code>claude --version</code>
+                                </div>
+                                <p>如果显示版本号，说明安装成功！</p>
                             </div>
-                            <p>如果显示版本号，说明安装成功！</p>
+                        </div>
+
+                        <div class="tip-box">
+                            <h4 class="tip-title">💡 小贴士</h4>
+                            <ul class="detail-list">
+                                <li><strong>没有 Git Bash？</strong> 先安装 <a href="https://git-scm.com/download/win" target="_blank">Git for Windows</a>（参考前面 Git 安装步骤）</li>
+                                <li><strong>权限问题：</strong> 如果提示权限不足，右键点击 Git Bash 图标，选择"以管理员身份运行"</li>
+                            </ul>
                         </div>
                     </div>
 
-                    <div class="step-block">
-                        <h3 class="step-number">3. 初次使用</h3>
-                        <div class="step-details">
-                            <p>输入以下命令启动 Claude Code：</p>
-                            <div class="code-block">
-                                <code>claude</code>
+                    <!-- macOS -->
+                    <div class="os-content os-macos">
+                        <div class="step-block">
+                            <h3 class="step-number">🍎 macOS 一键安装</h3>
+                            <div class="step-details">
+                                <p><strong>步骤 1：打开终端</strong></p>
+                                <ul class="detail-list">
+                                    <li>按下 <kbd>Command + 空格</kbd> 打开 Spotlight 搜索</li>
+                                    <li>输入"终端"或"Terminal"</li>
+                                    <li>按回车打开终端应用</li>
+                                </ul>
+
+                                <p style="margin-top: 15px;"><strong>步骤 2：安装 Claude Code</strong></p>
+                                <p>在终端中输入以下命令：</p>
+                                <div class="code-block">
+                                    <code>npm install -g @anthropic-ai/claude-code</code>
+                                </div>
+                                <p>等待安装完成。</p>
+
+                                <p style="margin-top: 15px;"><strong>步骤 3：验证安装</strong></p>
+                                <div class="code-block">
+                                    <code>claude --version</code>
+                                </div>
+                                <p>如果显示版本号，说明安装成功！</p>
                             </div>
-                            <p>首次使用时，系统会引导您进行配置。请选择跳过 API 密钥配置，我们将在下一步配置智谱 AI。</p>
+                        </div>
+
+                        <div class="tip-box">
+                            <h4 class="tip-title">💡 小贴士</h4>
+                            <p>如果遇到权限错误，请在命令前加 <code>sudo</code>，即运行 <code>sudo npm install -g @anthropic-ai/claude-code</code></p>
                         </div>
                     </div>
 
-                    <div class="tip-box">
-                        <h4 class="tip-title">💡 小贴士</h4>
-                        <p>如果安装过程中遇到权限问题，<span class="os-windows">请以管理员身份运行命令提示符。</span><span class="os-macos os-linux">请使用 sudo 命令或在命令前加 sudo。</span></p>
+                    <!-- Linux -->
+                    <div class="os-content os-linux">
+                        <div class="step-block">
+                            <h3 class="step-number">🐧 Linux 一键安装</h3>
+                            <div class="step-details">
+                                <p><strong>步骤 1：打开终端</strong></p>
+                                <ul class="detail-list">
+                                    <li>按下 <kbd>Ctrl + Alt + T</kbd> 快捷键打开终端</li>
+                                    <li>或者在应用菜单中搜索"Terminal"</li>
+                                </ul>
+
+                                <p style="margin-top: 15px;"><strong>步骤 2：安装 Claude Code</strong></p>
+                                <p>在终端中输入以下命令：</p>
+                                <div class="code-block">
+                                    <code>sudo npm install -g @anthropic-ai/claude-code</code>
+                                </div>
+                                <p>输入用户密码（输入时不会显示），然后等待安装完成。</p>
+
+                                <p style="margin-top: 15px;"><strong>步骤 3：验证安装</strong></p>
+                                <div class="code-block">
+                                    <code>claude --version</code>
+                                </div>
+                                <p>如果显示版本号，说明安装成功！</p>
+                            </div>
+                        </div>
+
+                        <div class="tip-box">
+                            <h4 class="tip-title">💡 小贴士</h4>
+                            <p>如果遇到 npm 权限问题，可以考虑配置 npm 全局包无需 sudo：运行 <code>npm config set prefix '~/.npm-global'</code> 并将 <code>~/.npm-global/bin</code> 加入 PATH</p>
+                        </div>
                     </div>
 
                     <button class="btn btn-secondary" onclick="navigateTo('zhipu-api')">配置智谱 API →</button>
