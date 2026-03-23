@@ -1,0 +1,20 @@
+# Netlify 配置
+[build]
+  # 静态网站，不需要构建命令
+  command = "echo 'Static site - no build required'"
+  # 发布目录
+  publish = "."
+
+# 设置默认 headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+
+# 重定向到 index.html（单页应用）
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
