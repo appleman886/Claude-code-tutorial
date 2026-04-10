@@ -349,14 +349,27 @@ echo.
 if "!SUCCESS_NODE!"=="1" if "!SUCCESS_GIT!"=="1" if "!SUCCESS_CLAUDE!"=="1" (
     echo ✓ 所有组件安装成功!
     echo.
-    echo 下一步:
+    echo 下一步：配置 API 密钥
+    echo ========================================
+    echo.
+    echo 方法 1: 使用智谱官方助手 (推荐)
+    echo   运行：npx @z_ai/coding-helper
+    echo   说明：交互式向导，自动配置智谱 API
+    echo.
+    echo 方法 2: 手动配置环境变量
+    echo   智谱 AI:
+    echo     setx ANTHROPIC_AUTH_TOKEN "你的 API Key"
+    echo     setx ANTHROPIC_BASE_URL "https://open.bigmodel.cn/api/paas/v4"
+    echo.
+    echo   阿里云百炼:
+    echo     setx ANTHROPIC_API_KEY "你的 API Key"
+    echo     setx ANTHROPIC_BASE_URL "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+    echo.
+    echo 配置完成后:
     echo   1. 关闭此窗口并重新打开命令行
     echo   2. 运行 claude 启动程序
-    echo   3. 根据提示配置 API 密钥
     echo.
-    echo API 配置参考:
-    echo   智谱 AI: https://open.bigmodel.cn/
-    echo   阿里云百炼：https://bailian.console.aliyun.com/
+) else (
 ) else (
     echo 部分组件安装失败或未安装
     echo.
