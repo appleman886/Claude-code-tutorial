@@ -316,17 +316,15 @@
                         <p style="margin-top: 10px; font-size: 0.9em;">说明：首次运行会自动下载安装，按照提示操作即可。</p>
                     </div>
 
-                    <!-- 方案一：智谱 AI -->
+                    <!-- 方案：智谱 AI -->
                     <div class="step-block">
-                        <h3 class="step-number">方案一：智谱 AI</h3>
+                        <h3 class="step-number">方案：智谱 AI</h3>
                         <div class="step-details">
                             <p><strong>步骤 1：获取 API Key</strong></p>
-                            <ol class="steps-list">
-                                <li>访问 <a href="https://open.bigmodel.cn/" target="_blank">智谱开放平台</a></li>
-                                <li>注册/登录账号</li>
-                                <li>进入控制台 → API-KEY 管理</li>
-                                <li>创建 API Key 并复制保存</li>
-                            </ol>
+                            <p style="margin-left: 45px;">1. 访问 <a href="https://open.bigmodel.cn/" target="_blank">智谱开放平台</a></p>
+                            <p style="margin-left: 45px;">2. 注册/登录账号</p>
+                            <p style="margin-left: 45px;">3. 进入控制台 → API-KEY 管理</p>
+                            <p style="margin-left: 45px;">4. 创建 API Key 并复制保存</p>
 
                             <p style="margin-top: 20px;"><strong>步骤 2：配置环境变量</strong></p>
 
@@ -340,39 +338,6 @@
                             <div class="code-block">
                                 <code>echo 'export ANTHROPIC_AUTH_TOKEN="你的智谱 API Key"' >> ~/.zshrc</code><br>
                                 <code>echo 'export ANTHROPIC_BASE_URL="https://open.bigmodel.cn/api/paas/v4"' >> ~/.zshrc</code><br>
-                                <code>source ~/.zshrc</code>
-                            </div>
-                            <p style="font-size: 0.9em; color: var(--text-muted);">注：如使用 bash，将 ~/.zshrc 改为 ~/.bashrc</p>
-
-                            <p style="margin-top: 15px;"><strong>步骤 3：重启命令行</strong></p>
-                            <p>关闭当前窗口，重新打开命令提示符/终端，运行 <code>claude</code> 启动程序。</p>
-                        </div>
-                    </div>
-
-                    <!-- 方案二：阿里云百炼 -->
-                    <div class="step-block">
-                        <h3 class="step-number">方案二：阿里云百炼 Coding Plan</h3>
-                        <div class="step-details">
-                            <p><strong>步骤 1：获取 API Key</strong></p>
-                            <ol class="steps-list">
-                                <li>访问 <a href="https://bailian.console.aliyun.com/" target="_blank">阿里云百炼控制台</a></li>
-                                <li>登录阿里云账号</li>
-                                <li>订阅 Coding Plan 服务</li>
-                                <li>获取 API Key（格式：sk-sp-xxxxx）</li>
-                            </ol>
-
-                            <p style="margin-top: 20px;"><strong>步骤 2：配置环境变量</strong></p>
-
-                            <p><strong>Windows：</strong></p>
-                            <div class="code-block">
-                                <code>setx ANTHROPIC_API_KEY "你的阿里云 API Key"</code><br>
-                                <code>setx ANTHROPIC_BASE_URL "https://coding.dashscope.aliyuncs.com/apps/anthropic"</code>
-                            </div>
-
-                            <p style="margin-top: 15px;"><strong>macOS / Linux：</strong></p>
-                            <div class="code-block">
-                                <code>echo 'export ANTHROPIC_API_KEY="你的阿里云 API Key"' >> ~/.zshrc</code><br>
-                                <code>echo 'export ANTHROPIC_BASE_URL="https://coding.dashscope.aliyuncs.com/apps/anthropic"' >> ~/.zshrc</code><br>
                                 <code>source ~/.zshrc</code>
                             </div>
                             <p style="font-size: 0.9em; color: var(--text-muted);">注：如使用 bash，将 ~/.zshrc 改为 ~/.bashrc</p>
