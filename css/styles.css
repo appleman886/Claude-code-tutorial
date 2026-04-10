@@ -302,7 +302,7 @@ body {
 .steps-list li {
     counter-increment: step-counter;
     margin-bottom: 20px;
-    padding-left: 50px;
+    padding-left: 60px;
     position: relative;
     color: var(--text-secondary);
     font-size: 1.1rem;
@@ -312,7 +312,7 @@ body {
 .steps-list li::before {
     content: counter(step-counter);
     position: absolute;
-    left: 0;
+    left: 5px;
     top: 0;
     width: 35px;
     height: 35px;
@@ -324,6 +324,7 @@ body {
     justify-content: center;
     font-weight: 700;
     font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* 步骤块 */
