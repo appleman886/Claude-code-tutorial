@@ -302,7 +302,7 @@ body {
 .steps-list li {
     counter-increment: step-counter;
     margin-bottom: 20px;
-    padding-left: 55px;
+    padding-left: 70px;
     position: relative;
     color: var(--text-secondary);
     font-size: 1.1rem;
@@ -312,7 +312,7 @@ body {
 .steps-list li::before {
     content: counter(step-counter);
     position: absolute;
-    left: -10px;
+    left: 0;
     top: 0;
     width: 35px;
     height: 35px;
