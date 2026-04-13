@@ -370,7 +370,6 @@ if "!SUCCESS_NODE!"=="1" if "!SUCCESS_GIT!"=="1" if "!SUCCESS_CLAUDE!"=="1" (
     echo   2. 运行 claude 启动程序
     echo.
 ) else (
-) else (
     echo 部分组件安装失败或未安装
     echo.
     echo 请:
